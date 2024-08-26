@@ -102,6 +102,9 @@ python src/api.py
 ```bash
 curl -X POST http://127.0.0.1:5000/predict -H "Content-Type: applicat ion/json" -d '{"features": [1,debt_consolidation,0.1496,194.02,10.71441777,4,667,3180.041667,3839,76.8,0,0,1]}'
 ```
+
+![Example GIF](https://github.com/ArjunSridharkumar/complete_ml_pipeline/raw/main/flask_recording.gif)
+
 ## Reproducing using the Docker container.
 
 ### 1. Pull the container from the docker registry
@@ -139,3 +142,4 @@ For CI/CD, I have used GitHub Actions to automate:
 
 The GitHub Actions workflow file `.github/workflows/docker-image.yml` contains the steps.
 
+![Example GIF](https://github.com/ArjunSridharkumar/complete_ml_pipeline/raw/main/ci_cd.gif)
