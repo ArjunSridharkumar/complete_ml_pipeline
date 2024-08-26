@@ -60,7 +60,7 @@ Download the dataset from Kaggle and put the loan.csv in the data/loan/ director
 ### 4. Run Exploratory Data Analysis (EDA)
 Run the EDA scripts. The EDA is performed in a jupyter notebook currently.
 ```bash
-jupyter lab notebooks/eda.ipynb
+jupyter eda.ipynb
 ```
 
 ### 5. Run the Pipeline Using Apache Airflow

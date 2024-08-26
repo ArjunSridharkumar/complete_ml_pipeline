@@ -1,0 +1,9 @@
+apache-airflow==2.10.0
+flask==2.2.5
+pendulum==3.0.0
+pyarrow==17.0.0
+pydantic==2.8.2
+pydantic_core==2.20.1
+flask_session
+pandas==2.2.2
+scikit-learn==1.5.1
