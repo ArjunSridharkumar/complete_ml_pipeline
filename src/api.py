@@ -26,7 +26,6 @@ def predict():
 
 
     X = None
-
     data = request.get_json(force=True)
     data_list = data['features']
     if len(data_list) != 13:
