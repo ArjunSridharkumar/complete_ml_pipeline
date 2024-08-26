@@ -1,0 +1,1 @@
+docker remove ml_pipeline_container
