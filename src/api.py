@@ -24,6 +24,7 @@ def predict():
     # prediction = model.predict([data['features']])
     # return jsonify({'prediction': prediction.tolist()})
     X = None
+
     data = request.get_json(force=True)
     data_list = data['features']
     if len(data_list) != 13:
