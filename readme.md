@@ -3,31 +3,29 @@
 
 ## Overview
 The Machine learning task is to predict if a bank customer would repay a loan or not given a record of customers of the bank and their loan details.
-The task itself is supervised since we have been provided labels for the data.
-
-The project uses AirFlow for orchestration. The ML pipeline is split into two parts:
-* Data Ingestion, Processing and Training
-    * I have used 5 tasks:
-    ** load_data: Loading the data. The dataset used is hosted on Kaggle.
-
-* Inference
+The task itself is supervised since labels have been provided for the data.
+The dataset can be download from [kaggle](https://www.kaggle.com/datasets/itssuru/loan-data/data).
 
 ## Project Structure
 ```
 ml_pipeline_project/
-│
+├── ml_pipeline.py
+├── eda.ipynb
+├── models
+│   ├── trained_model.pkl
+├── scripts
+│   ├── start_flask_app.sh
+│   ├── start_airflow_server.sh
+├── output
+│   ├── confusion_matrix.txt
+│   ├── classification_report.txt
 ├── data/
-├── notebooks/
-│   └── eda.ipynb
 ├── src/
 │   ├── __init__.py
 │   ├── data_preprocessing.py
 │   ├── model_training.py
 │   ├── evaluation.py
 │   └── api.py
-├── dags/
-│   └── ml_pipeline_dag.py
-├── Dockerfile
 ├── requirements.txt
 └── README.md
 ```
