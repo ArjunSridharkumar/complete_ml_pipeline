@@ -89,14 +89,20 @@ docker build -t ml_pipeline_project .
 docker run -it ml_pipeline_project
 ```
 
-### 7.  Serve the Model via Flask API ()
+### 7.  Serve the Model via Flask API
+
+#### 7a. Serve the Model.
 To expose the trained model via an API:
 ```bash
 python src/api.py
 ```
 - The API will be available at `http://127.0.0.1:5000`.
-- Use a POST request to `/predict` with JSON input to get predictions.
 
+#### 7b. Perform Model inference.
+- Use a POST request to `/predict` with JSON input to get predictions.
+```bash
+curl -X POST http://127.0.0.1:5000/predict -H "Content-Type: applicat ion/json" -d '{"features": [1,debt_consolidation,0.1496,194.02,10.71441777,4,667,3180.041667,3839,76.8,0,0,1]}'
+```
 ## Using the Docker container.
 
 ### 1. Pull the container from the docker registry
@@ -113,7 +119,6 @@ docker pull arjunsridhar9720/rbc_assessment:latest
 ./clean_up.sh
 ```
 
-
 ## AirFlow Pipeline Structure
 The pipeline includes the following steps: (the airflow task name is indicated inside the brackets)
 1. **Data Ingestion (load_data)**: Load the dataset from the specified source.
@@ -126,6 +131,7 @@ The pipeline includes the following steps: (the airflow task name is indicated i
 Each of the individual task can be tested using (no need to start the server and scheduler):
 ```bash
 airflow tasks test ml_pipeline load_data
+airflow tasks test ml_pipeline <task_name>
 ```
 
 ### Model Monitoring
