@@ -34,8 +34,8 @@ ml_pipeline_project/
 The requirements.txt highlights the packages required if reproduction is necessary.
 python version: 3.10.12
 
-## Setup Instructions
-## Reproducing this project
+## Setup Instructions to reproduce
+## Reproducing using the sourcecode from GitHub
 
 ### 1. Clone the Repository
 ```bash
@@ -102,7 +102,7 @@ python src/api.py
 ```bash
 curl -X POST http://127.0.0.1:5000/predict -H "Content-Type: applicat ion/json" -d '{"features": [1,debt_consolidation,0.1496,194.02,10.71441777,4,667,3180.041667,3839,76.8,0,0,1]}'
 ```
-## Using the Docker container.
+## Reproducing using the Docker container.
 
 ### 1. Pull the container from the docker registry
 ```bash
