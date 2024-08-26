@@ -34,6 +34,7 @@ ml_pipeline_project/
 
 ## Requirements
 The requirements.txt highlights the packages required if reproduction is necessary.
+python version: 3.10.12
 
 ## Setup Instructions
 ## Reproducing this project
@@ -51,7 +52,7 @@ python -m venv ml_pipeline_venv
 source ml_pipeline_venv/bin/activate
 pip install -r requirements.txt
 ```
-(You can install python from here.)
+(You can install python 3.10.12 from [here](https://www.python.org/downloads/release/python-31012/).)
 
 ### 3. Data Preparation
 Download the dataset from Kaggle and put the loan.csv in the data/loan/ directory.
