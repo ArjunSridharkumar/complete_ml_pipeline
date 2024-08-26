@@ -20,19 +20,19 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Pull Docker Image from Hub
-      run: docker pull ${{ secrets.DOCKER_USERNAME }}/myapp:latest
+      run: docker pull ${{ secrets.DOCKER_USERNAME }}/rbc_assessment:latest
 
     - name: Run Container from Image
-      run: docker run -d --name temp_container ${{ secrets.DOCKER_USERNAME }}/myapp:latest
+      run: docker run -d --name temp_container ${{ secrets.DOCKER_USERNAME }}/rbc_assessment:latest
 
     - name: Copy Files from Local to Container
       run: docker cp ./path/to/local/files temp_container:/path/to/container/destination
 
     - name: Commit Changes to the Image
-      run: docker commit temp_container ${{ secrets.DOCKER_USERNAME }}/myapp:latest
+      run: docker commit temp_container ${{ secrets.DOCKER_USERNAME }}/rbc_assessment:latest
 
     - name: Push Updated Image to Docker Hub
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/myapp:latest
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/rbc_assessment:latest
 
     - name: Clean up
       run: |
