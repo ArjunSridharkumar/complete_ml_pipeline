@@ -26,7 +26,7 @@ jobs:
       run: docker run -d --name temp_container ${{ secrets.DOCKER_USERNAME }}/rbc_assessment:latest
 
     - name: Copy Files from Local to Container
-      run: docker cp ./path/to/local/files temp_container:/path/to/container/destination
+      run: docker cp ./ temp_container:/opt/airflow/dags/
 
     - name: Commit Changes to the Image
       run: docker commit temp_container ${{ secrets.DOCKER_USERNAME }}/rbc_assessment:latest
