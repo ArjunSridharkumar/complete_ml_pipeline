@@ -26,6 +26,7 @@ def predict():
 
 
     X = None
+    
 
 
     data = request.get_json(force=True)
