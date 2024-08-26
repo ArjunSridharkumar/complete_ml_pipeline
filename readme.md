@@ -145,3 +145,4 @@ For CI/CD, I have used GitHub Actions to automate:
 - **Docker Image CI**: This workflow allows to update the codebase and the docker container as changes are made in the ML pipeline and modelling process.
 
 The GitHub Actions workflow file `.github/workflows/docker-image.yml` contains the steps.
+
