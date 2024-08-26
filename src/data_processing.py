@@ -9,6 +9,11 @@ def load_data(filepath):
     return df
 
 def preprocess_data(df):
+    #There are no none values in the dataset. Checked in the preprocessing notebook.
+    #If nan values in inference then we should return None
+    if df.isnull().values.any():
+        print("Columns with missing values:")
+        return None
     #retrieve only the numerical features
     columns_to_drop = ['credit.policy', 'purpose', 'not.fully.paid', 'delinq.2yrs', 'inq.last.6mths', 'pub.rec']
     if 'not.fully.paid' not in df.columns.tolist():

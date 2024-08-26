@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 ./../src/api.py
+python3 /opt/airflow/dags/src/api.py
