@@ -23,12 +23,12 @@ def evaluate_model(model, X_test, y_test):
     # print(classification_report(y_test, y_pred))
     cr = classification_report(y_test, y_pred)
     # Save confusion matrix to a file
-    with open('/opt/airflow/dags/confusion_matrix.txt', 'w') as f:
+    with open('/opt/airflow/dags/output/confusion_matrix.txt', 'w') as f:
         f.write("Confusion Matrix:\n")
         f.write(str(cm) + '\n')
 
     # Save classification report to a file
-    with open('/opt/airflow/dags/classification_report.txt', 'w') as f:
+    with open('/opt/airflow/dags/output/classification_report.txt', 'w') as f:
         f.write("Classification Report:\n")
         f.write(cr + '\n')
 
