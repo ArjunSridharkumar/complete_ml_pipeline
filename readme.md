@@ -133,13 +133,6 @@ airflow tasks test ml_pipeline load_data
 airflow tasks test ml_pipeline <task_name>
 ```
 
-### Model Monitoring
-For production deployment, consider implementing model monitoring strategies:
-- **Latency Monitoring**: Measure the time taken by the model to return predictions.
-- **Data Drift Monitoring**: Use tools like Evidently AI to detect data drift.
-- **Model Retraining**: Retrain the model when performance drops below a certain threshold.
-
-
 ## CI/CD Pipeline Proposal
 For CI/CD, I have used GitHub Actions to automate:
 - **Docker Image CI**: This workflow allows to update the codebase and the docker container as changes are made in the ML pipeline and modelling process.
