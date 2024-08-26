@@ -111,7 +111,7 @@ docker pull arjunsridhar9720/rbc_assessment:latest
 
 ### 2. Run the container
 ```bash
-./execute_me.sh
+./train_model.sh
 ```
 ### 3. Clean up
 ```bash
